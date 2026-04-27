@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆瓣</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 做项目时要考虑css的影响，如果头部用三个div包裹，就实现不了一起居中显示的效果 -->
+    <header class="header">
+        <!-- 整个header出了问题，外边距合并了 -->
+        <!-- 1.可以设置header的上内边距，不要设置外边距了 -->
+        <!-- 2. 把header设置个BFC -->
+        <div class="container clearfix">
+            <div class="logo left">
+                <h1>
+                    <a href="index.html">
+                        <span>豆瓣</span>
+                    </a>
+                </h1>
+            </div>
+            <!-- 如何实现搜索效果：给input元素外边套一个form，form再包上提交按钮 -->
+            <div class="search left">
+                <form>
+                    <input type="text" class="txt" placeholder="电影、书籍、音乐">
+                    <!-- 要用绝对定位把按钮固定在文本框内（首先想到包含块） -->
+                    <button>
+                        <i class="iconfont icon-sousuo"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- 一般是有子菜单的时候会用ul/li -->
+            <nav class="menu right clearfix">
+                <!-- 问题1：背景图比较大，导致a元素读取时用的是原始的宽高 -->
+                <!-- 解决：人为的把背景图尺寸设小 -->
+
+                <!-- 问题2：a元素全部垂直排列（都是块盒） -->
+                <!-- 解决：浮动/全部变为行块盒 -->
+
+                <!-- 距离太近了：设置margin-left -->
+
+                <!-- 问题3：背景图要不一样 -->
+                <!-- 没有捷径，只能一个一个地方设置 -->
+
+                <!-- 为什么要加前缀：以防后面会出现同样名称的元素 -->
+                <a href="" class="menu-read"></a>
+                <a href="" class="menu-movie"></a>
+                <a href="" class="menu-music"></a>
+                <a href="" class="menu-group"></a>
+                <a href="" class="menu-city"></a>
+                <a href="" class="menu-fm"></a>
+                <a href="" class="menu-time"></a>
+                <a href="" class="menu-doupin"></a>
+            </nav>
+        </div>
+    </header>
+    <!-- 登录区域是做到一个ifream里面的，这样可以在其他网页上也能copy -->
+</body>
+</html>
