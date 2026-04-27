@@ -1,6 +1,5 @@
 @import "reset.css";
 @import "common.css";
-@import "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.css";
 
 /* 统一设置 */
 a{
@@ -128,11 +127,11 @@ input[type="text"].more-text-indent{
     font-weight:bold;
 }
 
+/* 不加border-box的话，加了padding，尺寸不太对了 */
 .container .login .form .form-item .country-code .choose-area .center ul{
     height:180px;
     overflow:auto;
     padding:10px;
-    /* 不加border-box的话，加了padding，尺寸不太对了 */
     box-sizing:border-box;
     font-size:14px;
 }
@@ -141,8 +140,7 @@ input[type="text"].more-text-indent{
     height:38px;
     line-height:38px;
     border-top:1px solid #e5e5e5;
-    margin-top:-1px;
-
+    cursor:pointer;
 }
 
 .container .login .form .form-item .country-code .choose-area .center ul li .right{
@@ -151,4 +149,20 @@ input[type="text"].more-text-indent{
 
 .container .login .form .form-item .country-code .choose-area .center ul li:last-child{
     border-bottom:1px solid #e5e5e5;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li.selected{
+    color:#42bd56;
+}
+
+/* 为什么到这里，右侧的区号没有变？ */
+/* 左边的文字继承父元素li，但是右边span元素自己设置元素，没有继承颜色 */
+/* 利用层叠，找到选中的li的right元素，设置一下继承 */
+
+.container .login .form .form-item .country-code .choose-area .center ul li.selected .right{
+    color:inherit;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li.selected .iconfont{
+    margin-left:10px;
 }
