@@ -38,6 +38,8 @@ input[type="text"].more-text-indent{
     padding:10px;
     padding-top:30px;
     color:#9b9b9b;
+    box-sizing: border-box;
+    position:relative;
 }
 
 .container .login .switch-menu{
@@ -64,6 +66,7 @@ input[type="text"].more-text-indent{
     margin:10px 0;
     /* 只要不去偏移，不会造成什么影响，并不会改变以前的排列方式 */
     position:relative;
+    font-size:13px;
 }
 
 .container .login .form .form-item.txt{
@@ -165,4 +168,120 @@ input[type="text"].more-text-indent{
 
 .container .login .form .form-item .country-code .choose-area .center ul li.selected .iconfont{
     margin-left:10px;
+}
+
+.container .form-item .ab-right{
+    position:absolute;
+    right:7px;
+    top:5px;
+}
+
+.container .form-item .btn{
+    width:100%;
+    height:34px;
+    font-size:15px;
+}
+
+.container .login .form .form-item.tip{
+    font-size:12px;
+    color:#333;
+}
+
+.btn:disabled{
+    background:rgba(66,189,86,.5);
+}
+
+.container .login .bottom{
+    border-top:1px solid #ddd;
+}
+
+.container .login .bottom .msg{
+    font-size:11px;
+    vertical-align:2px;
+}
+
+.container .login .bottom .iconfont{
+    margin-left:12px;
+}
+
+.container .login .bottom .iconfont.icon-weixin{
+    color:#34950e;
+}
+
+.container .login .bottom .iconfont.icon-weibo{
+    color:#ea5d5c;
+}
+
+.container .qrcode{
+    font-size:13px;
+}
+
+.container .qrcode .title{
+    color:#333;
+    border-bottom:1px solid #ececec;
+}
+
+.container .qrcode .code{
+    text-align:center;
+    /* 这里图片距离div底部还有一点距离，可能影响样式 */
+    /* 解决方案：font-size设为0/图片设置display:block（注意：要再去设置居中方式） */
+    font-size:0;
+    margin-top:20px;
+
+}
+
+.container .qrcode .code img{
+    width:170px;
+    height:170px;
+}
+
+.container .qrcode .tip{
+    width:183px;
+    height:25px;
+    background:rgba(0,0,0,.08);
+    color:#494949;
+    line-height:25px;
+    margin:0 auto;
+    text-align:center;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.container .change{
+    position:absolute;
+    width:30px;
+    height:30px;
+    right:10px;
+    top:10px;
+}
+
+.container .change .icon{
+    width:30px;
+    height:30px;
+    /* 现在是行盒，如果不改的话设高度没用 */
+    display:block;
+    cursor:pointer;
+}
+
+.container .change .icon.icon-qrcode{
+    background:url("./../img/qrcodeicon.png")no-repeat left top/100% 100%;
+}
+
+.container .change .icon.icon-pc{
+    background:url("./../img/computericon.png")no-repeat left top/100% 100%;
+}
+
+.container .pointer{
+    position:absolute;
+    /* 不用管宽度，根据字体文字多少来设置的 */
+    height:28px;
+    line-height:28px;
+    border:1px solid rgba(66, 189, 86, 0.3);
+    color:#666;
+    font-size:13px;
+    background:#f5faf9;
+    right:50px;
+    top:10px;
+    padding:0 5px;
+    border-radius:4px;
 }

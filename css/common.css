@@ -1,4 +1,4 @@
-@import "//at.alicdn.com/t/c/font_5166859_ud2193fc8q9.css";
+@import "//at.alicdn.com/t/c/font_5166859_ig3l63twd1q.css";
 
 body{
     font-family:"Arial",sans-serif
@@ -15,4 +15,17 @@ body{
     content:"";
     display:block;
     clear:both;
+}
+
+/* 要把样式做出来，但是初始时隐藏的，就写个公共样式 */
+.hidden{
+    display:none;
+}
+
+.btn{
+    background:#41ac52;
+    cursor:pointer;
+    text-align:center;
+    color:#fff;
+    border-radius:4px;
 }
